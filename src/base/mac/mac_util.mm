@@ -432,7 +432,7 @@ std::string GetOSDisplayName() {
 
 std::string GetPlatformSerialNumber() {
   base::mac::ScopedIOObject<io_service_t> expert_device(
-      IOServiceGetMatchingService(kIOMainPortDefault,
+      IOServiceGetMatchingService(MACH_PORT_NULL,
                                   IOServiceMatching("IOPlatformExpertDevice")));
   if (!expert_device) {
     DLOG(ERROR) << "Error retrieving the machine serial number.";
