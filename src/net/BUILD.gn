@@ -1684,7 +1684,6 @@ component("net") {
       "Network.framework",
       "Security.framework",
       "SystemConfiguration.framework",
-      "UniformTypeIdentifiers.framework",
     ]
   }
 
